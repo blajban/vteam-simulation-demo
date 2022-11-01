@@ -1,0 +1,20 @@
+version: "3"
+networks:
+  scooters:
+
+services:
+  scooter_server:
+    image: blajban/scooter-server:latest
+    container_name: "scooter_server"
+    ports: 
+      - "8585:5000"
+    networks:
+      scooters:
+    restart: 
+      "always"
+  
+  scooter:
+    image: blajban/scooter:latest
+    networks:
+      scooters:
+
