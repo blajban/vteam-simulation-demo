@@ -20,4 +20,4 @@ docker-compose up -d scooter_server
 # Uncomment to start in background
 #docker-compose up -d scooter
 
-echo "Server listening on https://localhost:8585"
+echo "Server listening on http://localhost:8585"

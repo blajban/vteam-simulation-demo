@@ -23,7 +23,7 @@ def get_log():
 @app.route('/')
 def routes():
     log(request)
-    return get_log()
+    return get_log().splitlines()
 
 
 if __name__ == "__main__":

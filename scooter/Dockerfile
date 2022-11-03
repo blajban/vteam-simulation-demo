@@ -10,14 +10,15 @@ RUN apk add --no-cache bash && apk add --no-cache curl
 # - Could be python script, c++ program or whatever
 # - Could be multiple scripts
 #
-COPY scooter.sh .
+#COPY scooter.sh .
+COPY scooter2.sh .
 
 # Cronjobs
 # - Could add multiple jobs with different intervals
 #
-ADD crontab  /var/spool/cron/crontabs/scooter
-RUN chmod 0644  /var/spool/cron/crontabs/scooter
-RUN crontab  /var/spool/cron/crontabs/scooter
+#ADD crontab  /var/spool/cron/crontabs/scooter
+#RUN chmod 0644  /var/spool/cron/crontabs/scooter
+#RUN crontab  /var/spool/cron/crontabs/scooter
 
 # Go
 ENTRYPOINT [ "crond", "-f" ]
